@@ -1,0 +1,34 @@
+{
+  "id": -1,
+  "name": "",
+  "description": "",
+  "blocks": [
+    {
+      "class": "ReadVar",
+      "center": [-564, -204],
+      "parameters": { "Id": 1, "Name": "Variable 1" }
+    },
+    {
+      "class": "ReadVar",
+      "center": [-564, -57],
+      "parameters": { "Id": 2, "Name": "Variable 2" }
+    },
+    { "class": "+", "center": [-251, -141], "parameters": {} },
+    {
+      "class": "PeriodicCalc",
+      "center": [-150, -141],
+      "parameters": { "operation": "Moyenne", "period": 60, "validity_rate": 75 }
+    },
+    {
+      "class": "WriteVar",
+      "center": [-44, -153],
+      "parameters": { "Id": 3, "Name": "Variable 3" }
+    }
+  ],
+  "links": [
+    { "parent": 1, "output": 1, "child": 3, "input": 1 },
+    { "parent": 2, "output": 1, "child": 3, "input": 2 },
+    { "parent": 3, "output": 1, "child": 4, "input": 1 },
+    { "parent": 4, "output": 1, "child": 5, "input": 1 }
+  ]
+}
